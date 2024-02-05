@@ -23,12 +23,12 @@ const AdminProjects = () => {
         dispatch(ShowLoading());
         let response
         if(selectedItemForEdit){
-            response = await axios.post("/api/portfolio/update-project",{
+            response = await axios.post(`${process.env.REACT_APP_URL}/api/portfolio/update-project`,{
                 ...values,
                 _id:selectedItemForEdit._id
             });
         }else{
-            response = await axios.post("/api/portfolio/add-project",values);
+            response = await axios.post(`${process.env.REACT_APP_URL}/api/portfolio/add-project`,values);
         }
 
         dispatch(HideLoading());
@@ -51,7 +51,7 @@ const AdminProjects = () => {
   const onDelete = async (item)=>{
     try{
         dispatch(ShowLoading());
-        const response = await axios.post("/api/portfolio/delete-project",{_id:item._id});
+        const response = await axios.post(`${process.env.REACT_APP_URL}/api/portfolio/delete-project`,{_id:item._id});
 
         dispatch(HideLoading());
         if(response.data.success){

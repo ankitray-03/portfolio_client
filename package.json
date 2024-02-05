@@ -42,6 +42,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
-  },
-  "proxy": "https://app-portfolio-p5pf.onrender.com"
+  }
 }
