@@ -43,5 +43,5 @@
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://app-portfolio-p5pf.onrender.com"
 }
